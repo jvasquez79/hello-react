@@ -25,4 +25,11 @@ import "./global.css";
 
 const container = document.getElementById('app');
 
-ReactDOM.render(<Badge />, container);
+ReactDOM.render(
+  <Badge 
+    firstName="Rex" 
+    lastName="Vásquez" 
+    jobTitle="Sleep Enthusiast" 
+    twitter="rextheschnauzer" 
+    avatarUrl="http://www.gravatar.com/avatar?d=identicon" 
+  />, container);
