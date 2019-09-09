@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Badge from './components/Badge';
+//import Badge from './components/Badge';
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
+import BadgeNew from './pages/BadgeNew';
 // import './index.css';
 // import { directive } from '@babel/types';
 // import App from './App';
@@ -25,11 +26,13 @@ import "./global.css";
 
 const container = document.getElementById('app');
 
-ReactDOM.render(
+/* ReactDOM.render(
   <Badge 
     firstName="Rex" 
     lastName="Vásquez" 
     jobTitle="Sleep Enthusiast" 
     twitter="rextheschnauzer" 
     avatarUrl="http://www.gravatar.com/avatar?d=identicon" 
-  />, container);
+  />, container); */
+
+ReactDOM.render(<BadgeNew />, container);

@@ -1,0 +1,127 @@
+####################
+# Curso de React.js
+####################
+
+###	¿Qué es React?
+
+###	Pre-requisitos
+
+Desarrollo Web Online
+	HTML, CSS
+Javascript
+	jQuery
+	Promesas
+	Asincronía
+Línea de comando
+	Instalar herramientas
+	Correr servidor
+	
+###	Herramientas
+
+React Developer Tools
+Visual Studio Code
+Prettier (plugin de Visual Studio Code)
+Create React App
+	npm install -g create-react-app
+	create-react-app hello-react
+	cd hello-react
+	npm run start
+
+###	Estructura
+Dentro de public existe un archivo llamado index.html con un único div para la aplicación.
+En el directorio src se encuentra el archivo index.js que es el punto de partida. Funciona de la siguiente forma:
+	Importa librerías necesarias
+	Importa algún componente
+	Se crean variables Javascript con el contenido a mostrar
+	Se utiliza el método ReactDOM.render indicando qué se desplegará y dónde
+	
+###	React DOM
+React y ReactDOM trabajarán en conjunto.
+
+React como análogo a createElement
+ReactDOM a appendChild
+ReactDOM.render() toma dos argumentos: Qué queremos renderizar y dónde lo queremos renderizar.
+
+Siempre que escribas JSX es requisito importar React.
+
+###	JSX
+
+JSX es una extensión de JavaScript creada por Facebook para el uso con la biblioteca React. Sirve de preprocesador (como Sass o Stylus a CSS) y transforma el código generado con React a JavaScript.
+
+Ejemplo de JSX:
+const jsx = (
+  <div>
+    <h1>Hola, soy Javier</h1>
+    <p>Soy Ingeniero Frontend.</p>
+  </div>
+);
+
+JSX tiene su alternativa que es React.createElement pero es preferible JSX porque es mucho más legible y expresivo. Ambos tienen el mismo poder y la misma capacidad.
+
+Ejemplo con React.createElement:
+const element = React.createElement(
+	'div',
+	{},
+	React.createElement('h1', {}, `Hola, soy Javier`),
+	React.createElement('p', {}, `Soy Ingeniero Frontend.`)
+);
+
+React.createElement recibe 3 argumentos:
+
+1. El tipo de elemento que estamos creando (h1, p, a, etc)
+2. Sus atributos o props encerrados en llaves {}
+3. Contenido, llamados children, separados por coma.
+Ejemplo:
+React.createElement('a', { href: 'https://platzi.com' }, 'Ir a Platzi');
+
+En JSX se utilizan las llaves para introducir variables o expresiones de Javascript. Lo que sea que esté adentro se va a evaluar y su resultado se mostrará en pantalla.
+
+Ejemplo:
+const sum = () => 3 + 3
+const jsx = <h1>Hola, soy { sum() }</h1>
+
+Las expresiones pueden ser llamadas a otras funciones, cálculos matemáticos, etc. Si las expresiones son false, 0, null, undefined, entre otros, no se verán.
+
+###	Componentes
+
+Unidades básicas de desarrollo.
+
+Un elemento es a un objeto lo que un componente es a una clase.
+
+Los componentes en React son bloques de construcción.
+Las aplicaciones hechas con React son como figuras de Lego. Junta varias piezas (componentes) y puedes construir un website tan pequeño o tan grande como quieras.
+Los componentes serán barras de búsquedas, enlaces, encabezados, el header, etc.
+
+”Componente” vs “elemento
+Un elemento es a un objeto como un componente es a una clase. Si el elemento fuera una casa, el componente serían los planos para hacer esa casa.
+
+Identificación de componentes
+Para identificarlos debes hacerte las siguientes preguntas:
+
+¿Qué elementos se repiten? Estos son los elementos en una lista o los que comparten aspecto visual y su funcionalidad
+¿Qué elementos cumplen una función muy específica? Estos sirven para encapsular la lógica y permiten juntar muchos comportamientos y aspectos visuales en un solo lugar.
+Identificar componentes es una habilidad esencial para poder desarrollar aplicaciones de React.
+
+###	Cómo funcionan los componentes
+
+Ciclo de vida
+	Montaje
+	Actualización
+		render()
+	Desaparición
+
+Siempre deben llevar un método render()
+
+A ReactDOM.render hay que enviarle un elemento, no un componente, por lo cual al componente se le debe rodear con < y >.
+
+Las imagenes se importan y se colocan en variables
+Las hojas de estilo se importan sin variables
+En el HTML de un componente no se debe usar clas sino className
+
+
+
+
+
+
+
+
