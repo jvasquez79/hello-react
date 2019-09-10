@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 //import Badge from './components/Badge';
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
-import BadgeNew from './pages/BadgeNew';
+// import BadgeNew from './pages/BadgeNew';
+import Badges from './pages/Badges';
 // import './index.css';
 // import { directive } from '@babel/types';
 // import App from './App';
@@ -35,4 +36,4 @@ const container = document.getElementById('app');
     avatarUrl="http://www.gravatar.com/avatar?d=identicon" 
   />, container); */
 
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<Badges />, container);
