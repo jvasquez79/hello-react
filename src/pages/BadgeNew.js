@@ -7,6 +7,16 @@ import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 
 class BadgeNew extends React.Component {
+    state = { form: {} };
+
+    handleChange = e => {
+        this.setState( {
+            form: {
+                [e.target.name]: e.target.value
+            }
+        })
+    }
+    
     render() {
         return (
             <div>
