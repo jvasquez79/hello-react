@@ -4,6 +4,7 @@ import './styles/Badges.css';
 import confLogo from '../images/badge-header.svg';
 import Navbar from '../components/Navbar';
 import BadgesList from '../components/BadgesList';
+import { Link } from 'react-router-dom';
 //import BadgeForm from '../components/BadgeForm';
 
 class BadgeNew extends React.Component {
@@ -56,7 +57,8 @@ class BadgeNew extends React.Component {
 
                 <div className="Badge__container">
                     <div className="Badges__buttons">
-                        <a href="/badges/new" className="btn btn-primary">New Badge</a>
+                        {/* <a href="/badges/new" className="btn btn-primary">New Badge</a> */}
+                        <Link to="/badges/new" className="btn btn-primary">New Badge</Link> 
                     </div>
                 </div>
 
