@@ -3,7 +3,6 @@ import React from 'react';
 import './styles/Badges.css';
 import confLogo from '../images/badge-header.svg';
 import Navbar from '../components/Navbar';
-import Badge from '../components/Badge';
 import BadgesList from '../components/BadgesList';
 //import BadgeForm from '../components/BadgeForm';
 

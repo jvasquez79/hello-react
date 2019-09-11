@@ -17,3 +17,31 @@
   width: 80px;
   height: 80px;
 }
+
+
+.badgeListContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+li.container {
+  height: 150px;
+}
+
+.badgeListContainer picture img {
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 60px;
+}
+
+.badgeListContainer h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.badgeListContainer p {
+  font-size: 12px;
+}

@@ -1,0 +1,11 @@
+.badgeListContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.badgeListContainer h2 {
+    font-size: 10px;
+}
+li {
+    display: none;
+}
