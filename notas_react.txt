@@ -177,3 +177,6 @@ Desmontaje:
 
 Nos da la oportunidad de hacer limpieza de nuestro componente.
 Se llama un método: componentWillUnmount.
+
+Al ejecutarse componentWillUnmount, cualquier tarea asíncrona que no ha terminado provocará un warning ya que al terminar esa tarea tratará de hacer un update sobre un elemento que ya no existe. Para eso, se obtiene el ID del método asíncrono y ese ID es enviado al método clearTimeout.
+
