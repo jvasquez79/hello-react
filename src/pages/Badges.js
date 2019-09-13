@@ -3,12 +3,19 @@ import React from 'react';
 import './styles/Badges.css';
 import confLogo from '../images/badge-header.svg';
 import BadgesList from '../components/BadgesList';
+import api from '../api'
 import { Link } from 'react-router-dom';
 //import BadgeForm from '../components/BadgeForm';
 
-class BadgeNew extends React.Component {
+class Badges extends React.Component {
     
-    constructor(props) {
+    state = {
+        loading: true,
+        error: null,
+        data: undefined
+    }
+
+    /* constructor(props) {
         super(props);
         console.log('1. constructor()');
 
@@ -70,10 +77,28 @@ class BadgeNew extends React.Component {
     componentWillUnmount() {
         console.log('6. componentWillUnmount()');
         clearTimeout(this.timeoutId);
+    } */
+
+    componentDidMount() {
+        this.fetchData();
+    }
+
+    fetchData = async () => {
+        this.setState({ loading: true, error: null});
+
+        try {
+            const data = await api.badges.list();
+            this.setState({ loading: false, data: data});
+        } catch(error) {
+            this.setState({ loading: false, error: error});
+        }
     }
 
     render() {
-        console.log('2/4. render()');
+        //console.log('2/4. render()');
+        if (this.state.loading === true) {
+            return 'Loading...';
+        }
         return (
             <React.Fragment>
                 <div className="Badges">
@@ -102,4 +127,4 @@ class BadgeNew extends React.Component {
     }
 }
 
-export default BadgeNew;
+export default Badges;
