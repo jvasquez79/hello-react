@@ -180,7 +180,7 @@ Se llama un método: componentWillUnmount.
 
 Al ejecutarse componentWillUnmount, cualquier tarea asíncrona que no ha terminado provocará un warning ya que al terminar esa tarea tratará de hacer un update sobre un elemento que ya no existe. Para eso, se obtiene el ID del método asíncrono y ese ID es enviado al método clearTimeout.
 
-npm config set strict-ssl false
+npm config --global set strict-ssl false
 git config --global http.sslVerify false
 
 ### Experiencia de usuario (loader y error)
@@ -190,3 +190,7 @@ Animaciones de carga (loader) con CSS.
 
 https://emojipedia.org/
 Para incluir emojis
+
+### Enviar datos (POST)
+
+
