@@ -3,6 +3,8 @@ import React from 'react';
 import './styles/Badges.css';
 import confLogo from '../images/badge-header.svg';
 import BadgesList from '../components/BadgesList';
+import PageLoading from '../components/PageLoading';
+import PageError from '../components/PageError';
 import api from '../api'
 import { Link } from 'react-router-dom';
 //import BadgeForm from '../components/BadgeForm';
@@ -97,7 +99,12 @@ class Badges extends React.Component {
     render() {
         //console.log('2/4. render()');
         if (this.state.loading === true) {
-            return 'Loading...';
+            //return 'Loading...';
+            return <PageLoading />
+        }
+        if (this.state.error) {
+            //return `Error: ${this.state.error.message}`;
+            return <PageError error={this.state.error} />;
         }
         return (
             <React.Fragment>
