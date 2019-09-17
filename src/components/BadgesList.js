@@ -1,6 +1,8 @@
 import React from 'react';
 import './styles/BadgesList.css';
 import { Link } from 'react-router-dom';
+//import md5 from 'md5';
+import Gravatar from './Gravatar';
 
 class BadgesList extends React.Component {
 
@@ -25,13 +27,19 @@ class BadgesList extends React.Component {
                         <li key={badge.id} className="container">
                             <div className="shadow p-3 mb-5 badgeListContainer">
                                 <picture>
-                                    <img src={badge.avatarUrl} alt={altMessage} />
+                                    <Gravatar
+                                        className="Badge__avatar"
+                                        email={badge.email}
+                                        alt={altMessage}
+                                         />
                                 </picture>
                                 <div>
                                     <h2>{badge.firstName} {badge.lastName}</h2>
                                     <p><a href={twitterUrl}>@{badge.twitter}</a>
                                     <br/>
                                     {badge.jobTitle}
+                                    <br/>
+                                    {badge.email}
                                     </p>
                                 </div>
                             </div>
@@ -45,3 +53,7 @@ class BadgesList extends React.Component {
 //<li key={badge.id}><p>{badge.firstName} {badge.lastName} </p></li>
 
 export default BadgesList;
+
+//src={`http://www.gravatar.com/avatar/${hash}?d=identicon`}
+//<img src={badge.avatarUrl} alt={altMessage} />
+//<img src={`http://www.gravatar.com/avatar/${md5(badge.email)}?d=identicon`} alt={altMessage} />
