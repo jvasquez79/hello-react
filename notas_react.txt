@@ -193,4 +193,7 @@ Para incluir emojis
 
 ### Enviar datos (POST)
 
+### Polling
+
+Polling consiste en que cada cierto tiempo que es definido por nosotros se buscan los datos y se actualizan automáticamente. Esto se hará constantemente hasta que el usuario se vaya de la página.
 
