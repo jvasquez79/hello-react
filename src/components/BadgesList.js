@@ -25,7 +25,7 @@ class BadgesList extends React.Component {
                     return (
                         // <li key={badge.id}><p>{badge.firstName} {badge.lastName} </p></li>                        
                         <li key={badge.id} className="container">
-                            <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}/edit`}>
+                            <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}`}>
                             <div className="shadow p-3 mb-5 badgeListContainer">
                                 <picture>
                                     <Gravatar
